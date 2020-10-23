@@ -7,22 +7,22 @@ import 'package:provider/provider.dart';
 void main() {
   runApp(MyApp());
 }
+
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ChangeNotifierProvider(
       create: (ctx) => Products(),
-          child: MaterialApp(
+      child: MaterialApp(
         title: 'MyShop',
-        theme: ThemeData(primarySwatch: Colors.purple,
-        accentColor:Colors.deepOrange,
-        fontFamily: 'Lato'
-         ),
+        theme: ThemeData(
+            primarySwatch: Colors.purple,
+            accentColor: Colors.deepOrange,
+            fontFamily: 'Lato'),
         home: ProductsOverviewScreen(),
         routes: {
-          ProductDetailScreen.routeName: (ctx)=>ProductDetailScreen(),
+          ProductDetailScreen.routeName: (ctx) => ProductDetailScreen(),
         },
-      
       ),
     );
   }
